@@ -36,13 +36,14 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 .testimonials-track { display:flex; gap:16px; width:max-content; animation:scroll-left 40s linear infinite; }
 .testimonials:hover .testimonials-track { animation-play-state:paused; }
 .tcard { background:#fff; border-radius:16px; padding:0; flex:0 0 260px; box-shadow:0 4px 20px rgba(0,0,0,.06); overflow:hidden; }
-.tcard img { width:100%; height:180px; object-fit:contain; background:#f1ede1; }
+.tcard img { width:100%; height:auto; display:block; }
 .tcard-body { padding:16px; }
 .tcard-body p { font-size:14px; color:#333; margin:8px 0 12px; line-height:1.4; }
 .tname { font-weight:700; font-size:14px; }
 .trole { font-size:12px; color:#888; }
-.levels { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:28px; }
-.level-tab { display:flex; align-items:center; gap:10px; background:#fff; border:1px solid #ece6d8; border-radius:14px; padding:10px 16px; cursor:pointer; text-align:left; box-shadow:0 1px 3px rgba(0,0,0,.04); transition:border-color .15s, box-shadow .15s; }
+.levels { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:28px; }
+@media (max-width:640px){ .levels{grid-template-columns:repeat(2,1fr);} }
+.level-tab { display:flex; flex-direction:column; align-items:center; gap:8px; background:#fff; border:1px solid #ece6d8; border-radius:14px; padding:16px; cursor:pointer; text-align:center; box-shadow:0 1px 3px rgba(0,0,0,.04); transition:border-color .15s, box-shadow .15s; }
 .level-tab:hover { border-color:#e0392b; }
 .level-badge { width:34px; height:34px; border-radius:50%; background:#f1ede1; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; color:#14203f; flex:0 0 auto; }
 .level-tab .lv-title { font-weight:800; font-size:14px; color:#0d1b3d; }
@@ -71,7 +72,7 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 .bonus-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 @media (max-width:640px){ .bonus-grid{grid-template-columns:1fr;} }
 .bonus-card { background:#16264f; border-radius:16px; padding:18px; border-left:3px solid #f5a623; }
-.bonus-card img { width:100%; border-radius:10px; margin-bottom:14px; }
+.bonus-card img { width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:14px; }
 .btag { display:inline-block; background:#f5a623; color:#14203f; font-size:11px; font-weight:800; padding:4px 10px; border-radius:6px; margin-bottom:10px; }
 .bonus-card h4 { font-size:16px; margin-bottom:6px; }
 .bonus-card .tagline { font-size:12px; color:#f5a623; font-weight:600; margin-bottom:8px; }
