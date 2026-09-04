@@ -32,17 +32,27 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 @keyframes scroll-left { from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 .cta-center { text-align:center; margin-top:20px; }
 .light { background:#f1ede1; }
-.testimonials { display:flex; gap:16px; overflow-x:auto; padding:8px 4px 24px; }
+.testimonials { overflow:hidden; padding:8px 0 24px; -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); }
+.testimonials-track { display:flex; gap:16px; width:max-content; animation:scroll-left 40s linear infinite; }
+.testimonials:hover .testimonials-track { animation-play-state:paused; }
 .tcard { background:#fff; border-radius:16px; padding:0; flex:0 0 260px; box-shadow:0 4px 20px rgba(0,0,0,.06); overflow:hidden; }
-.tcard img { width:100%; height:180px; object-fit:cover; }
+.tcard img { width:100%; height:180px; object-fit:contain; background:#f1ede1; }
 .tcard-body { padding:16px; }
 .tcard-body p { font-size:14px; color:#333; margin:8px 0 12px; line-height:1.4; }
 .tname { font-weight:700; font-size:14px; }
 .trole { font-size:12px; color:#888; }
 .levels { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:28px; }
-.level-tab { background:#fff; border:2px solid #ece6d8; border-radius:12px; padding:10px 18px; font-weight:700; font-size:14px; cursor:pointer; text-align:left; min-width:120px; color:#0d1b3d; }
-.level-tab .lv-name { font-size:12px; font-weight:600; color:#666; }
-.level-tab.active { border-color:#e0392b; background:#fce4e2; }
+.level-tab { display:flex; align-items:center; gap:10px; background:#fff; border:1px solid #ece6d8; border-radius:14px; padding:10px 16px; cursor:pointer; text-align:left; box-shadow:0 1px 3px rgba(0,0,0,.04); transition:border-color .15s, box-shadow .15s; }
+.level-tab:hover { border-color:#e0392b; }
+.level-badge { width:34px; height:34px; border-radius:50%; background:#f1ede1; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; color:#14203f; flex:0 0 auto; }
+.level-tab .lv-title { font-weight:800; font-size:14px; color:#0d1b3d; }
+.level-tab .lv-name { font-size:12px; font-weight:600; color:#888; }
+.level-tab.active { border-color:#e0392b; box-shadow:0 4px 14px rgba(224,57,43,.15); }
+.level-tab.active .level-badge { background:#e0392b; color:#fff; }
+.level-empty { border:2px dashed #ddd; border-radius:16px; padding:56px 24px; text-align:center; background:#fff; margin-bottom:24px; }
+.level-empty .emoji { font-size:32px; margin-bottom:14px; }
+.level-empty h3 { font-size:20px; margin-bottom:8px; color:#0d1b3d; }
+.level-empty p { font-size:14px; color:#666; max-width:380px; margin:0 auto; }
 .level-panel { background:#fff; border-radius:16px; padding:24px; margin-bottom:24px; border:1px solid #ece6d8; }
 .level-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; flex-wrap:wrap; gap:10px; }
 .level-head h3 { font-size:19px; color:#0d1b3d; }
