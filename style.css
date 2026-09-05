@@ -36,7 +36,7 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 .testimonials-track { display:flex; gap:16px; width:max-content; animation:scroll-left 40s linear infinite; }
 .testimonials:hover .testimonials-track { animation-play-state:paused; }
 .tcard { background:#fff; border-radius:16px; padding:0; flex:0 0 260px; box-shadow:0 4px 20px rgba(0,0,0,.06); overflow:hidden; }
-.tcard-photo { width:100%; height:220px; object-fit:cover; display:block; background:#f1ede1; }
+.tcard-photo { width:100%; height:auto; display:block; }
 .tcard-body { padding:20px; }
 .tcard-body p { font-size:14px; color:#333; margin:8px 0 14px; line-height:1.4; }
 .tperson { display:flex; align-items:center; gap:10px; }
@@ -104,3 +104,11 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 .step-num { width:32px; height:32px; border-radius:50%; background:#0d1b3d; color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-size:14px; }
 .step h4 { font-size:15px; margin-bottom:8px; color:#0d1b3d; }
 .step p { font-size:13px; color:#666; line-height:1.5; }
+.faq-list { max-width:720px; margin:0 auto 28px; display:flex; flex-direction:column; gap:10px; }
+.faq-item { background:#fff; border:1px solid #ece6d8; border-radius:14px; overflow:hidden; }
+.faq-question { width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; background:none; border:none; text-align:left; padding:18px 20px; font-family:inherit; font-size:15px; font-weight:700; color:#0d1b3d; cursor:pointer; }
+.faq-icon { flex:0 0 auto; font-size:18px; font-weight:700; color:#e0392b; transition:transform .2s; }
+.faq-item.open .faq-icon { transform:rotate(45deg); }
+.faq-answer { max-height:0; overflow:hidden; transition:max-height .25s ease; }
+.faq-answer p { padding:0 20px 18px; font-size:14px; color:#555; line-height:1.6; }
+.faq-item.open .faq-answer { max-height:220px; }
