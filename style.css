@@ -95,8 +95,13 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 .offer-meta { text-align:center; font-size:12px; color:#888; margin-bottom:4px; }
 .guarantee-tag { text-align:center; font-size:13px; font-weight:700; color:#0a8a3a; margin-bottom:18px; }
 .summary { border-top:1px dashed #ddd; margin-top:16px; padding-top:16px; }
-.summary-row { display:flex; justify-content:space-between; font-size:13px; padding:4px 0; }
-.summary-row .val { color:#999; text-decoration:line-through; }
+.summary-row { display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-size:13px; padding:4px 0; }
+.summary-row .val { color:#999; text-decoration:line-through; white-space:nowrap; flex:0 0 auto; }
+.closer-card { background:none; border-color:rgba(255,255,255,.25); box-shadow:none; }
+.closer-card h3 { color:#fff; }
+.closer-card p { color:#c7cee2; }
+.closer-card .summary { border-top-color:rgba(255,255,255,.2); }
+.closer-card .summary-row { color:#fff; }
 .guarantee-card { max-width:640px; margin:0 auto; background:linear-gradient(180deg,#f2fbf6,#eafaf1); border:1px solid #d6f0e0; border-radius:20px; padding:36px; text-align:center; }
 .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 @media (max-width:640px){ .steps{grid-template-columns:1fr;} }
