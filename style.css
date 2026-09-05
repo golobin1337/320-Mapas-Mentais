@@ -42,8 +42,7 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 .tavatar { width:40px; height:40px; border-radius:50%; object-fit:cover; flex:0 0 auto; }
 .tname { font-weight:700; font-size:14px; }
 .trole { font-size:12px; color:#888; }
-.levels { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:28px; }
-@media (max-width:640px){ .levels{grid-template-columns:repeat(2,1fr);} }
+.levels { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:28px; }
 .level-tab { display:flex; flex-direction:column; align-items:center; gap:10px; background:#fff; border:1px solid #ece6d8; border-radius:16px; padding:22px 16px; cursor:pointer; text-align:center; box-shadow:0 1px 3px rgba(0,0,0,.04); transition:border-color .15s, box-shadow .15s; }
 .level-tab:hover { border-color:#e0392b; }
 .level-badge { background:#fce4e2; color:#c02b1f; font-weight:800; font-size:12px; padding:4px 14px; border-radius:999px; }
@@ -51,6 +50,12 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 .level-tab .lv-name { font-size:13px; font-weight:600; color:#888; }
 .level-tab.active { border-color:#e0392b; box-shadow:0 4px 14px rgba(224,57,43,.15); }
 .level-tab.active .level-badge { background:#e0392b; color:#fff; }
+@media (max-width:480px){
+  .level-tab { padding:14px 6px; gap:6px; }
+  .level-badge { font-size:10px; padding:3px 10px; }
+  .level-tab .lv-title { font-size:12px; }
+  .level-tab .lv-name { font-size:10px; }
+}
 .level-empty { border:2px dashed #ddd; border-radius:16px; padding:56px 24px; text-align:center; background:#fff; margin-bottom:24px; }
 .level-empty .emoji { font-size:32px; margin-bottom:14px; }
 .level-empty h3 { font-size:20px; margin-bottom:8px; color:#0d1b3d; }
@@ -73,7 +78,7 @@ h2 { font-size:30px; font-weight:800; text-align:center; margin-bottom:12px; col
 .bonus-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 @media (max-width:640px){ .bonus-grid{grid-template-columns:1fr;} }
 .bonus-card { background:#16264f; border-radius:16px; padding:18px; border-left:3px solid #f5a623; }
-.bonus-card img { width:100%; height:160px; object-fit:cover; border-radius:10px; margin-bottom:14px; }
+.bonus-card img { width:100%; height:auto; display:block; border-radius:10px; margin-bottom:14px; }
 .btag { display:inline-block; background:#f5a623; color:#14203f; font-size:11px; font-weight:800; padding:4px 10px; border-radius:6px; margin-bottom:10px; }
 .bonus-card h4 { font-size:16px; margin-bottom:6px; }
 .bonus-card .tagline { font-size:12px; color:#f5a623; font-weight:600; margin-bottom:8px; }

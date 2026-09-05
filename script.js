@@ -1,7 +1,6 @@
 const offerDateEl = document.getElementById('offerDate');
 if (offerDateEl) {
   const d = new Date();
-  d.setDate(d.getDate() + 3);
   const dd = String(d.getDate()).padStart(2, '0');
   const mm = String(d.getMonth() + 1).padStart(2, '0');
   offerDateEl.textContent = `${dd}/${mm}/${d.getFullYear()}`;
