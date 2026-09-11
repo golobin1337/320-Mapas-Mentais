@@ -11,7 +11,7 @@ h1 mark { background:none; color:#e0392b; padding:0; box-decoration-break:clone;
 h2 mark, h3 mark, .sub mark, .center-sub mark, p mark { background:none; color:#e0392b; padding:0; font-weight:800; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
 .dark h2 mark, .dark h3 mark, .dark .center-sub mark, .dark p mark { color:#ff6b57; }
 .sub { font-size:17px; color:#5c6478; max-width:600px; margin:0 auto 32px; line-height:1.5; }
-.hero-img { max-width:100%; border-radius:16px; box-shadow:0 20px 50px rgba(0,0,0,.15); margin-bottom:28px; }
+.hero-img { max-width:100%; margin-bottom:28px; }
 .cta-btn { display:inline-block; background:#22a05f; color:#fff; font-weight:800; font-size:18px; padding:18px 40px; border-radius:999px; text-decoration:none; box-shadow:0 8px 0 #16713f; transition: transform .1s; }
 .cta-btn:active { transform: translateY(4px); box-shadow:0 4px 0 #16713f; }
 .cta-note { font-size:13px; color:#777; margin-top:12px; }
